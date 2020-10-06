@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program 3</title>
+    <script>
+        var fs = 5;
+        function textAnimate() {
+
+            document.getElementById('text').style.color="red";
+                var timer = setInterval(animate, 100);
+                var state="growing"
+
+                function animate() {
+                    if(state=="growing") {
+                        document.getElementById('text').innerText="Text Growing";
+                        document.getElementById('text').style.color="red";
+                        fs += 5;
+                        document.getElementById('text').style.fontSize = fs + "pt"
+                    }
+                    if(state == "shrinking") {
+                        document.getElementById('text').innerText="Text Shrinking";
+                        document.getElementById('text').style.color="blue";
+                        fs-=5;
+                        document.getElementById('text').style.fontSize = fs + "pt"
+                        }
+                    if(fs == 50)
+                        state="shrinking";
+                    if(fs == 5)
+                        clearInterval(timer);
+                    }
+                }
+
+
+
+    </script>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="textAnimate()">
+<h1>Program to Increase / Decrease font size </h1>
+<p id="text"></p>
+
+
+
+</body>
+</html>

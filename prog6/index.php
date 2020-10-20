@@ -3,13 +3,17 @@
     <title>Prog 6</title>
 </head>
 <body>
- <h1>Hello Everyone</h1>
- <h2>x=50 and y=80</h2>
+ <h1>Number of visited who visited your webpage</h1>
   <?php
-    $x=50;
-    $y=80;
-    $res=$x+$y;
-    echo "<h2>Result = $res</h2>";
+    $handle=fopen("count.txt","r");
+    $count=fread($handle,10);
+    fclose($handle);
+    $count=intval($count);
+    $count+=1;
+    echo "<h2>Number of times the website was visited $count</h2>";
+    $handle=fopen("count.txt","w");
+    fwrite($handle,$count);
+    fclose($handle);
   ?>
 </body>
 </html>

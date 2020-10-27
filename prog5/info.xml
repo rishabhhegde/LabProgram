@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE student_info [
+        <!ELEMENT student_info (h1,h2+,label+)>
+        <!ELEMENT h1 (#PCDATA)>
+        <!ELEMENT h1 (#PCDATA)>
+        <!ELEMENT label (USN|name|coll|branch|email)*>
+        <!ELEMENT USN (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT coll (#PCDATA)>
+        <!ELEMENT branch (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+
+        ]>
+
+
+<student_info>
+        <h1>Student information</h1>
+        <h2>Student 1 information :</h2>
+            <label><USN>123</USN></label>
+            <label><name>abc</name></label>
+            <label><coll>SJEC</coll></label>
+            <label><branch>CSE</branch></label>
+            <label><email>abc@gmail.com</email></label>
+        <h2>Student 2 information :</h2>
+            <label><USN>234</USN></label>
+            <label><name>cde</name></label>
+            <label><coll>SJEC</coll></label>
+            <label><branch>ISE</branch></label>
+            <label><email>cde@gmail.com</email></label>
+        <h2>Student 3 information :</h2>
+            <label><USN>456</USN></label>
+            <label><name>efg</name></label>
+            <label><coll>SJEC</coll></label>
+            <label><branch>CIV</branch></label>
+            <label><email>efg@gmail.com</email></label>
+
+        </student_info>
